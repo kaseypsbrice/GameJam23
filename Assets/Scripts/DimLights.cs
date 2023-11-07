@@ -6,9 +6,9 @@ public class DimLights : MonoBehaviour
     public MoveSwitch switchLocation;
     public TriggerLights trigger;
     public string lightsTag = "Dimmer";
-    private Light[] lights;
+    public Light[] lights;
 
-    private bool playerInZone = false;
+    public bool playerInZone = false;
     public bool isOn = false;
 
     void Start()
@@ -33,17 +33,17 @@ public class DimLights : MonoBehaviour
     /* Creates an array of light objects that have been tagged
      * with "dimmer" and uses them to set the lights.
      */
+    public void SwitchPress()
+    {
+        {
+            Debug.Log("Beginning to dim lights.");
+            trigger.StartDimming();
+            switchLocation.RandomMoveSwitch();
+        }
+    }
     void Update()
     {
-        if (playerInZone)
-        {
-            if (Input.GetKeyDown(KeyCode.E) && lights != null)
-            {
-                Debug.Log("Beginning to dim lights.");
-                trigger.StartDimming();
-                switchLocation.RandomMoveSwitch();
-            }
-        }
+
     }
     /* If the player is within the zone of the light switch's
      * Box Collider and presses "E", the process for the lights

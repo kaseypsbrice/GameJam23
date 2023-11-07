@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveSwitch : MonoBehaviour
 {
     public Transform[] SwitchPositions;
+    public GameObject LightSwitchOBJ;
 
     public void RandomMoveSwitch()
     {
@@ -13,8 +14,8 @@ public class MoveSwitch : MonoBehaviour
             int randomIndex = Random.Range(0, SwitchPositions.Length);
             Transform newPosition = SwitchPositions[randomIndex];
 
-            transform.position = newPosition.position;
-            transform.rotation = newPosition.rotation;
+            LightSwitchOBJ.transform.position = newPosition.position;
+            LightSwitchOBJ.transform.rotation = newPosition.rotation;
 
             Debug.Log("Light has been moved to a random position.");
         }
