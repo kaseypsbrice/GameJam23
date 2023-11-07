@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4225674392504882233}
   - component: {fileID: 2107802485009096947}
   m_Layer: 0
-  m_Name: roof_light
+  m_Name: Roof Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
