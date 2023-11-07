@@ -2,6 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class MoveSwitch : MonoBehaviour
+{
+    public Transform[] SwitchPositions;
+
+    public void RandomMoveSwitch()
+    {
+        if (SwitchPositions.Length > 0)
+        {
+            int randomIndex = Random.Range(0, SwitchPositions.Length);
+            Transform newPosition = SwitchPositions[randomIndex];
+
+            transform.position = newPosition.position;
+            transform.rotation = newPosition.rotation;
+
+            Debug.Log("Light has been moved to a random position.");
+        }
+        else
+        {
+            Debug.LogError("No switch positions defined.");
+        }
+    }
+}
+
+/*
 public class InitSwitch : MonoBehaviour
 {
     public GameObject LightSwitchPrefab;
@@ -31,15 +55,11 @@ public class InitSwitch : MonoBehaviour
             Debug.LogError("No switch positions defined.");
         }
     }
-    /* Takes an array of objects representing the position of the switches.
-     * It then randomly chooses an index and gets the object's position 
-     * and rotation. If the prefab doesn't have the the components required
-     * to dim the lights, they'll be added after the prefab is instantiated.
-     */
 
-    void Start()
-    {
-        InstantiateRandomSwitch();
-    }
+void Start()
+{
+    InstantiateRandomSwitch();
+}
     // Calls the function on start.
 }
+*/

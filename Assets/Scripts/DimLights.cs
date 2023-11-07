@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public class DimLights : MonoBehaviour
 {
+    public MoveSwitch switchLocation;
     public TriggerLights trigger;
-    public Transform lightGroup;
+    public string lightsTag = "Dimmer";
     private Light[] lights;
 
     private bool playerInZone = false;
@@ -12,42 +13,35 @@ public class DimLights : MonoBehaviour
 
     void Start()
     {
-        if (lightGroup == null)
+        GameObject[] lightObjects = GameObject.FindGameObjectsWithTag(lightsTag);
+
+        if (lightObjects.Length > 0)
         {
-            GameObject addedLightGroup = GameObject.FindWithTag("Lights");
-            if (addedLightGroup != null)
+            lights = new Light[lightObjects.Length];
+            for (int i = 0; i < lightObjects.Length; i++)
             {
-                Debug.Log("Found light group object with tag: " + addedLightGroup.name);
-                lightGroup = addedLightGroup.transform;
-                lights = lightGroup.GetComponentsInChildren<Light>();
-                Debug.Log("Number of lights found: " + lights.Length);
+                lights[i] = lightObjects[i].GetComponent<Light>();
             }
-            // There seems to be an issue with this but I don't know how to fix it
+            Debug.Log("Number of lights found with tag '" + lightsTag + "': " + lights.Length);
         }
         else
         {
-            lights = lightGroup.GetComponentsInChildren<Light>();
+            Debug.LogWarning("No lights found with tag '" + lightsTag + "'.");
         }
         trigger.SetLights(lights);
     }
-    /* If the lightGroup isn't manually set in the inspector,
-     * it'll search for the group of lights.
-     * In this case, we're searching for the parent of the group
-     * using tags. You only need to set the parent's tags, don't
-     * worry about the children's.
-     * It'll find all the children of the parent so that we end up
-     * with an array of lights that will later be iterated through
-     * in TriggerLights.
+    /* Creates an array of light objects that have been tagged
+     * with "dimmer" and uses them to set the lights.
      */
-
     void Update()
     {
         if (playerInZone)
         {
-            if (Input.GetKeyDown(KeyCode.E) && lightGroup != null)
+            if (Input.GetKeyDown(KeyCode.E) && lights != null)
             {
                 Debug.Log("Beginning to dim lights.");
                 trigger.StartDimming();
+                switchLocation.RandomMoveSwitch();
             }
         }
     }
