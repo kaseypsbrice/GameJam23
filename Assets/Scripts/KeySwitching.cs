@@ -7,6 +7,7 @@ public class KeySwitching : MonoBehaviour
     public DimLights lightscript;
     public string firstKey = "f";
     private string randomKey;
+    public bool randomise;
 
     string[] keys;
 
@@ -53,7 +54,11 @@ public class KeySwitching : MonoBehaviour
         if (Input.GetKeyDown(randomKey) && lightscript.lights != null)
         {
             lightscript.SwitchPress();
-            PickNewKey();
+            if(randomise == true)
+            {
+                PickNewKey();
+            }
+
         }
     }
     void PickNewKey()
