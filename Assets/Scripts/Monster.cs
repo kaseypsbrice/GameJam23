@@ -5,20 +5,26 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public GameObject player;
+    public Animator monsterAnim;
     UnityEngine.AI.NavMeshAgent agent;
+    
     public float minSpeed;
     public float maxSpeed;
     public float currentSpeed;
-    public Light intensityCheck;
 
+    public Light intensityCheck;
     public float lightLevel;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        monsterAnim = GetComponent<Animator>();
+
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.speed = currentSpeed;
+        monsterAnim.SetFloat("Speed", currentSpeed);
+        
     }
 
     // Update is called once per frame
@@ -35,6 +41,7 @@ public class Monster : MonoBehaviour
         currentSpeed = Mathf.Lerp(maxSpeed, minSpeed, lightLevel);
 
         agent.speed = currentSpeed;
+        monsterAnim.SetFloat("Speed", currentSpeed);
     }
 
     // note, on collision, change scene to jumpscare (maybe put this in the scene manager script)

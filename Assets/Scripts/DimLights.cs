@@ -7,6 +7,7 @@ public class DimLights : MonoBehaviour
     public TriggerLights trigger;
     public string lightsTag = "Dimmer";
     public Light[] lights;
+    public Collider player;
 
     public bool playerInZone = false;
     public bool isOn = false;
@@ -50,23 +51,17 @@ public class DimLights : MonoBehaviour
      * will begin.
      */
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider player)
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Within light switch zone.");
-            playerInZone = true;
-        }
+        Debug.Log("Within light switch zone.");
+        playerInZone = true;
     }
     // Checks when the player enters the zone.
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider player)
     {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Exiting light switch zone.");
-            playerInZone = false;
-        }
+        Debug.Log("Exiting light switch zone.");
+        playerInZone = false;
     }
     // Checks when the player exits the zone.
 }

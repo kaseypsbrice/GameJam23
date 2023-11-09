@@ -215,7 +215,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &271171652
 GameObject:
@@ -406,7 +406,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940208431
 GameObject:
@@ -440,7 +440,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072042136}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!135 &940208433
 SphereCollider:
@@ -597,31 +597,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1159938267 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1736935747263148850, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
   m_PrefabInstance: {fileID: 1836291884}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1159938275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1159938267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a71d22e3c8a1440882025fa4b705e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchLocation: {fileID: 2072042137}
-  trigger: {fileID: 2072042138}
-  lightsTag: Dimmer
-  lights: []
-  playerInZone: 0
-  isOn: 0
 --- !u!1 &1236354498
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +636,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072042136}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!135 &1236354500
 SphereCollider:
@@ -879,11 +861,19 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2072042136}
     m_Modifications:
+    - target: {fileID: 1106777993844932787, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
+      propertyPath: trigger
+      value: 
+      objectReference: {fileID: 2072042138}
+    - target: {fileID: 1106777993844932787, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
+      propertyPath: switchLocation
+      value: 
+      objectReference: {fileID: 2072042137}
     - target: {fileID: 1391899741112789384, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1391899741112789384, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,6 +921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
+--- !u!4 &1836291885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1391899741112789384, guid: 30ddf19a921ee4e418047740e8e83ce6, type: 3}
+  m_PrefabInstance: {fileID: 1836291884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2072042135
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,11 +957,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1836291885}
   - {fileID: 940208432}
   - {fileID: 1236354499}
   - {fileID: 2096478812}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2072042137
 MonoBehaviour:
@@ -1010,8 +1006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b4ddf3eda3924a83fb4baa7fb2377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightscript: {fileID: 1159938275}
+  lightscript: {fileID: 0}
   firstKey: f
+  randomise: 0
 --- !u!1 &2084142339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,7 +1135,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2072042136}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!135 &2096478813
 SphereCollider:

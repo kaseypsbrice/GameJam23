@@ -8,6 +8,7 @@ public class KeySwitching : MonoBehaviour
     public string firstKey = "f";
     private string randomKey;
     public bool randomise;
+    public AudioSource click;
 
     string[] keys;
 
@@ -54,6 +55,7 @@ public class KeySwitching : MonoBehaviour
         if (Input.GetKeyDown(randomKey) && lightscript.lights != null)
         {
             lightscript.SwitchPress();
+            click.Play();
             if(randomise == true)
             {
                 PickNewKey();

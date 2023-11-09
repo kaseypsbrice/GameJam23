@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7178647663027936724}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCapsule
       objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -327,7 +331,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2026917029007122448, guid: 8802a25db12db6d4c9f33df7927c9017, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8802a25db12db6d4c9f33df7927c9017, type: 3}
 --- !u!1001 &7440579038806179310
 PrefabInstance:
