@@ -29,7 +29,6 @@ public class DimLights : MonoBehaviour
         {
             Debug.LogWarning("No lights found with tag '" + lightsTag + "'.");
         }
-        trigger.SetLights(lights);
     }
     /* Creates an array of light objects that have been tagged
      * with "dimmer" and uses them to set the lights.
@@ -38,6 +37,7 @@ public class DimLights : MonoBehaviour
     {
         {
             Debug.Log("Beginning to dim lights.");
+            trigger.TurnOnLights(lights);
             trigger.StartDimming();
             switchLocation.RandomMoveSwitch();
         }

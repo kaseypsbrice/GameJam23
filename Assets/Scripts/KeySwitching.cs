@@ -49,6 +49,8 @@ public class KeySwitching : MonoBehaviour
             Press();
         }
     }
+    // Keeps getting a null reference exception error
+    // that points to line 47
 
     void Press()
     {
