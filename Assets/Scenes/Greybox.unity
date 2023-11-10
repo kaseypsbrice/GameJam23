@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1786513257}
-  m_IndirectSpecularColor: {r: 0.0031405292, g: 0.0061706104, b: 0.014241753, a: 1}
+  m_IndirectSpecularColor: {r: 0.0031405094, g: 0.0061705993, b: 0.014241768, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -723,6 +723,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 268996875}
   loop: {fileID: 268996874}
+  closeGrowlSounds:
+  - {fileID: 8300000, guid: 76b7f6e9fab05264f8eb93383b1b6e5d, type: 3}
+  - {fileID: 8300000, guid: 2964f6a0cd667a642971066e9d09f306, type: 3}
+  - {fileID: 8300000, guid: 778280858a7042c48b6c987af77c2ff3, type: 3}
+  - {fileID: 8300000, guid: 3808c6269efb3174d8e4d453d7c85e42, type: 3}
+  - {fileID: 8300000, guid: d3a3b5475ab2eba4493ce4f734f85408, type: 3}
+  - {fileID: 8300000, guid: 15b7f94585130ff4f948bd4be0f500e2, type: 3}
+  - {fileID: 8300000, guid: 687b1954f69699c4b8620440cfab4fd7, type: 3}
+  - {fileID: 8300000, guid: be18fcf506c334b4a830991be794cb3e, type: 3}
+  farGrowlSounds:
+  - {fileID: 8300000, guid: 6e45e38b4021ec94b9dc2d7ca38073bc, type: 3}
+  - {fileID: 8300000, guid: cc3be0d24b29c0344ab270208502f5ae, type: 3}
+  - {fileID: 8300000, guid: 6d76c7c343eefbd4991dcff4b5077d89, type: 3}
+  - {fileID: 8300000, guid: 19ef7681820e8f64ab668ba44de6489e, type: 3}
+  - {fileID: 8300000, guid: f9692a562f0d5664db820468d4bc6140, type: 3}
+  - {fileID: 8300000, guid: 00bed359ac40989418d8616c23b56722, type: 3}
+  - {fileID: 8300000, guid: 70e6ee70189e0e8409f964136c979ba8, type: 3}
+  - {fileID: 8300000, guid: 52a06fa43ebd1da40aa352092cddbbe4, type: 3}
+  player: {fileID: 0}
 --- !u!4 &268996877
 Transform:
   m_ObjectHideFlags: 0
@@ -2352,6 +2371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dimmingDuration: 10
+  presetLightIntensity: 0
 --- !u!1001 &1747333580
 PrefabInstance:
   m_ObjectHideFlags: 0

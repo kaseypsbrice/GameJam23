@@ -152,7 +152,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.14930207, b: 0, a: 1}
-  m_Intensity: 10
+  m_Intensity: 0
   m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -343,7 +343,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.14930207, b: 0, a: 1}
-  m_Intensity: 10
+  m_Intensity: 0
   m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -534,7 +534,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.14930207, b: 0, a: 1}
-  m_Intensity: 10
+  m_Intensity: 0
   m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -938,6 +938,7 @@ GameObject:
   - component: {fileID: 2072042138}
   - component: {fileID: 2072042137}
   - component: {fileID: 2072042139}
+  - component: {fileID: 2072042140}
   m_Layer: 0
   m_Name: SwitchManager
   m_TagString: Untagged
@@ -994,6 +995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dimmingDuration: 5
+  presetLightIntensity: 10
 --- !u!114 &2072042139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,9 +1008,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b4ddf3eda3924a83fb4baa7fb2377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightscript: {fileID: 0}
+  lightscript: {fileID: 2072042140}
   firstKey: f
   randomise: 0
+  click: {fileID: 0}
+--- !u!114 &2072042140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072042135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a71d22e3c8a1440882025fa4b705e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchLocation: {fileID: 0}
+  trigger: {fileID: 0}
+  lightsTag: Dimmer
+  lights: []
+  player: {fileID: 0}
+  playerInZone: 0
+  isOn: 0
 --- !u!1 &2084142339
 GameObject:
   m_ObjectHideFlags: 0
