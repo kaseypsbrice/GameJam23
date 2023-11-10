@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: cbe6e74d4dc85cb48bb65979006ff4f5, type: 2}
+--- !u!1 &17543253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17543256}
+  - component: {fileID: 17543255}
+  - component: {fileID: 17543254}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &17543254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17543253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &17543255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17543253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &17543256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17543253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &42145443
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +223,7 @@ Transform:
   - {fileID: 231639616}
   - {fileID: 1087999549}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &65140428
 GameObject:
@@ -198,6 +266,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -261,6 +333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -322,6 +398,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -447,6 +527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -510,6 +594,7 @@ GameObject:
   - component: {fileID: 268996876}
   - component: {fileID: 268996875}
   - component: {fileID: 268996874}
+  - component: {fileID: 268996878}
   m_Layer: 0
   m_Name: Scene Ambiance
   m_TagString: Untagged
@@ -755,8 +840,22 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &268996878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268996873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6b844c1237a024aa710702b329c03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!1001 &271221795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -767,6 +866,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -829,6 +932,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -901,6 +1008,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -1004,6 +1115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354023851712763374, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 587956150468928812, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
       propertyPath: m_Name
       value: Roof Light (Basement)
@@ -1025,6 +1140,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -1128,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354023851712763374, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 587956150468928812, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
       propertyPath: m_Name
       value: Roof Light (Basement)
@@ -1149,6 +1272,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -1212,6 +1339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -1263,6 +1394,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
   m_PrefabInstance: {fileID: 458666623}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &524618556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524618558}
+  - component: {fileID: 524618557}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &524618557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524618556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef6b844c1237a024aa710702b329c03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 0}
+  monster: {fileID: 1587517865}
+--- !u!4 &524618558
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524618556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &593758532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1276,7 +1453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2498663408903511191, guid: 8802a25db12db6d4c9f33df7927c9017, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2498663408903511191, guid: 8802a25db12db6d4c9f33df7927c9017, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1338,6 +1515,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -1472,6 +1653,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354023851712763374, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 587956150468928812, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
       propertyPath: m_Name
       value: Roof Light (Basement)
@@ -1493,6 +1678,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Lightmapping
@@ -1568,6 +1757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1630,6 +1823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1691,6 +1888,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -1892,6 +2093,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5810654784588371651, guid: e1ddf0484a10b2041af25ff6396c27d5, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ddf0484a10b2041af25ff6396c27d5, type: 3}
 --- !u!4 &1128711813 stripped
@@ -1914,6 +2119,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -2008,6 +2217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -2074,6 +2287,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -2173,7 +2390,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1473879707
 PrefabInstance:
@@ -2185,6 +2402,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -2242,6 +2463,11 @@ Light:
   m_CorrespondingSourceObject: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
   m_PrefabInstance: {fileID: 757166109164847830}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1587517865 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8599608269328185718, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+  m_PrefabInstance: {fileID: 1766424582149952833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1622896684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2252,6 +2478,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -2356,7 +2586,7 @@ Transform:
   - {fileID: 679849804}
   - {fileID: 1234758584}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1642476027
 MonoBehaviour:
@@ -2370,8 +2600,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9227dfe722c6ad41a642c6572fe5e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimmingDuration: 10
-  presetLightIntensity: 0
+  dimmingDuration: 20
+  presetLightIntensity: 1.3
 --- !u!1001 &1747333580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2382,6 +2612,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -2544,6 +2778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof Light
       objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2602,6 +2840,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 231639616}
     m_Modifications:
+    - target: {fileID: 150073878507883489, guid: 9ac291ade48da3e4bac8ec208d4eb7d4, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 150073878507883490, guid: 9ac291ade48da3e4bac8ec208d4eb7d4, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
@@ -2675,6 +2917,10 @@ PrefabInstance:
     - target: {fileID: 450526270062100774, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_Name
       value: Roof Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 757166110132318692, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
       propertyPath: m_RootOrder
@@ -2800,7 +3046,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8132739333076622939, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8132739333076622939, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2863,6 +3109,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 231639616}
     m_Modifications:
+    - target: {fileID: 1416775358627115732, guid: f6359a676bb62cf48ae581145e6b4f84, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1451246305964759212, guid: f6359a676bb62cf48ae581145e6b4f84, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2922,7 +3172,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3683323984463224636, guid: e44ed5ebc61d9c74a9b6d55888efe84e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3683323984463224636, guid: e44ed5ebc61d9c74a9b6d55888efe84e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2988,7 +3238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7178647663027936724, guid: 36c707895f482fb49ae1144e6602e4db, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7178647663027936724, guid: 36c707895f482fb49ae1144e6602e4db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3083,6 +3333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 354023851712763374, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 587956150468928812, guid: 9b0f9489a8bb58745b718f072262c18a, type: 3}
       propertyPath: m_Name
       value: Roof Light (Basement)
@@ -3148,6 +3402,10 @@ PrefabInstance:
     - target: {fileID: 4168123625343854834, guid: e1ddf0484a10b2041af25ff6396c27d5, type: 3}
       propertyPath: m_Name
       value: Lamp (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810654784588371651, guid: e1ddf0484a10b2041af25ff6396c27d5, type: 3}
+      propertyPath: m_Intensity
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ddf0484a10b2041af25ff6396c27d5, type: 3}
