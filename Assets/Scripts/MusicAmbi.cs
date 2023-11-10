@@ -13,18 +13,16 @@ public class MusicAmbi : MonoBehaviour
     private AudioClip lastFarGrowl;
     public GameObject player;
     public GameObject monster;
-    public float TimeBetweenGrowls = 15f;
-
+    public int minInterval = 10;
+    public int maxInterval = 20;
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         monster = GameObject.FindWithTag("Monster");
         start.Play();
         loop.PlayDelayed(start.clip.length);
-        InvokeRepeating(nameof(PlayRandomGrowl), 10f, TimeBetweenGrowls);
-        /* Plays a random growl sound after a 10 second
-         * delay, then plays every 15 seconds.
-         * This is just an example of how it works.
+        Invoke(nameof(PlayRandomGrowl), Random.Range(minInterval, maxInterval));
+        /* Plays the growls at random intervals between min and max.
          */
     }
     void PlayRandomGrowl()
@@ -48,6 +46,9 @@ public class MusicAmbi : MonoBehaviour
         growlAudioSource.Play();
         Destroy(growlAudioSource, randomGrowl.length);
         Debug.Log("Playing monster growl: " + randomGrowl.name);
+        int nextInterval = Random.Range(minInterval, maxInterval + 1);
+        Invoke(nameof(PlayRandomGrowl), nextInterval);
+        Debug.Log($"Next growl scheduled in {nextInterval} seconds");
     }
     /* A different set of growl sounds will be played depending
      * on the monster's distance from the player.
