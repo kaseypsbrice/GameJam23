@@ -44,7 +44,7 @@ public class KeySwitching : MonoBehaviour
 
     private void Update()
     {
-        if (lightscript.playerInZone == true)
+        if (lightscript != null && lightscript.playerInZone == true)
         {
             Press();
         }
@@ -54,8 +54,9 @@ public class KeySwitching : MonoBehaviour
 
     void Press()
     {
-        if (Input.GetKeyDown(randomKey) && lightscript.lights != null)
+        if (Input.GetKeyDown(randomKey) && lightscript != null && lightscript.lights != null)
         {
+            randomise = true;
             lightscript.SwitchPress();
             click.Play();
             if(randomise == true)
