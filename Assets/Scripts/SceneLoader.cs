@@ -21,7 +21,7 @@ public class SceneLoader : MonoBehaviour
     {
         click.Play();
         StartCoroutine(AudioWait(click));
-        SceneManager.LoadScene("Greybox");
+        SceneManager.LoadScene("Tutorial");
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }

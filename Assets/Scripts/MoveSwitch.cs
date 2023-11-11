@@ -9,6 +9,7 @@ public class MoveSwitch : MonoBehaviour
     public Transform[] SwitchPositions;
     public GameObject LightSwitchOBJ;
     private Transform CurrentSwitchPosition;
+    public Monster monster;
 
     void Start()
     {
@@ -50,6 +51,7 @@ public class MoveSwitch : MonoBehaviour
             CurrentSwitchPosition = NewPosition;
             Debug.Log("Light at first position");
             hasbeen = true;
+            monster.enabled =  true;
         }
 
     }

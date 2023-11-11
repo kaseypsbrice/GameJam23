@@ -8,6 +8,9 @@ public class MusicAmbi : MonoBehaviour
     //public AudioClip[] growlSounds; // for single array code
     public AudioClip[] closeGrowlSounds;
     public AudioClip[] farGrowlSounds;
+    public AudioSource closeGrowl;
+    public AudioSource farGrowl;
+    public float monsterDistance;
     //private AudioClip lastGrowl; // for single array code
     private AudioClip lastCloseGrowl;
     private AudioClip lastFarGrowl;
@@ -29,22 +32,24 @@ public class MusicAmbi : MonoBehaviour
     {
         float distanceFromPlayer = Vector3.Distance(player.transform.position, monster.transform.position);
         AudioClip randomGrowl;
-        if (distanceFromPlayer < 10f)
+        AudioSource growlAudioSource;
+        if (distanceFromPlayer < monsterDistance)
         {
             Debug.Log("Distance from player: " + distanceFromPlayer);
             randomGrowl = GetRandomGrowl(closeGrowlSounds, lastCloseGrowl);
             lastCloseGrowl = randomGrowl;
+            growlAudioSource = closeGrowl;
         }
         else
         {
             Debug.Log("Distance from player: " + distanceFromPlayer);
             randomGrowl = GetRandomGrowl(farGrowlSounds, lastFarGrowl);
             lastFarGrowl = randomGrowl;
+            growlAudioSource = farGrowl;
         }
-        AudioSource growlAudioSource = gameObject.AddComponent<AudioSource>();
+
         growlAudioSource.clip = randomGrowl;
         growlAudioSource.Play();
-        Destroy(growlAudioSource, randomGrowl.length);
         Debug.Log("Playing monster growl: " + randomGrowl.name);
         int nextInterval = Random.Range(minInterval, maxInterval + 1);
         Invoke(nameof(PlayRandomGrowl), nextInterval);

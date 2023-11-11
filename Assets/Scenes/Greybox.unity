@@ -903,6 +903,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
   m_PrefabInstance: {fileID: 243197522}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &253959316 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 253959316, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+  m_PrefabInstance: {fileID: 1766424582149952833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &268996873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,6 +1151,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 00bed359ac40989418d8616c23b56722, type: 3}
   - {fileID: 8300000, guid: 70e6ee70189e0e8409f964136c979ba8, type: 3}
   - {fileID: 8300000, guid: 52a06fa43ebd1da40aa352092cddbbe4, type: 3}
+  closeGrowl: {fileID: 1786059004}
+  farGrowl: {fileID: 253959316}
+  monsterDistance: 15
   player: {fileID: 4135149980224560414}
   monster: {fileID: 1766424582149952834}
   minInterval: 5
@@ -5596,7 +5604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508059039}
   m_LocalRotation: {x: -1, y: -0, z: 0, w: 0}
-  m_LocalPosition: {x: 28.516, y: -6.167, z: 20.28}
+  m_LocalPosition: {x: 28.5212, y: -6.167, z: 20.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5865,6 +5873,7 @@ MonoBehaviour:
   - {fileID: 1319574984}
   - {fileID: 1329080750}
   LightSwitchOBJ: {fileID: 325402578}
+  monster: {fileID: 1766424582149952839}
 --- !u!4 &1642476025
 Transform:
   m_ObjectHideFlags: 0
@@ -6154,6 +6163,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 939924034424462236, guid: 6ef7dde9e4d039d46a70d824da6a366f, type: 3}
   m_PrefabInstance: {fileID: 1747333580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1786059004 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1786059004, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+  m_PrefabInstance: {fileID: 1766424582149952833}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1786513255
 GameObject:
@@ -7015,6 +7029,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1786059004, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: MaxDistance
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7099944770193088444, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: player
       value: 
@@ -7067,17 +7085,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 8905476807127549153, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1362278328}
     - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
-      propertyPath: maxSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
-      propertyPath: minSpeed
-      value: 0.5
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: intensityCheck
@@ -7090,6 +7108,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8905476807127549153, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
   m_PrefabInstance: {fileID: 1766424582149952833}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1766424582149952839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+  m_PrefabInstance: {fileID: 1766424582149952833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766424582149952834}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6315a685ba7cf5a409f3a7a2641f3452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3057845316595111116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7220,10 +7249,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6465527101493631841, guid: 36c707895f482fb49ae1144e6602e4db, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6563271548044185412, guid: 36c707895f482fb49ae1144e6602e4db, type: 3}
       propertyPath: m_Name
       value: Player

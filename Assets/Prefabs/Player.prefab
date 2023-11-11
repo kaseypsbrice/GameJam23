@@ -208,6 +208,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 28926af3c25500145ae7b35e6bcadbf1, type: 2}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: MoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: SprintSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule
@@ -279,6 +287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8204632581609374688}
     m_Modifications:
+    - target: {fileID: 1103866747, guid: 8802a25db12db6d4c9f33df7927c9017, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2498663408903511191, guid: 8802a25db12db6d4c9f33df7927c9017, type: 3}
       propertyPath: m_RootOrder
       value: 0
