@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using TMPro;
 
 public class MoveSwitch : MonoBehaviour
 {
     public Transform first;
-    private bool hasbeen;
+    private bool pressedFirst;
+    private bool pressedSecond;
     public Transform[] SwitchPositions;
     public GameObject LightSwitchOBJ;
     private Transform CurrentSwitchPosition;
     public Monster monster;
+    public TMP_Text prompt;
+    public bool textTexted = false;
+
+
 
     void Start()
     {
@@ -26,8 +33,19 @@ public class MoveSwitch : MonoBehaviour
     }
     public void RandomMoveSwitch()
     {
-        if(hasbeen == true)
+        if(pressedFirst == true)
         {
+            if (pressedSecond == false && textTexted == false)
+            {
+                prompt.SetText("Press F?");
+                pressedSecond = true;
+            }
+            if (pressedSecond == true && textTexted == false)
+            {
+                prompt.SetText("Press ???");
+                textTexted = true;
+            }
+
             if (SwitchPositions.Length > 1)
             {
                 Transform NewPosition = GetRandomPosition();
@@ -50,8 +68,9 @@ public class MoveSwitch : MonoBehaviour
             LightSwitchOBJ.transform.SetPositionAndRotation(NewPosition.position, NewPosition.rotation);
             CurrentSwitchPosition = NewPosition;
             Debug.Log("Light at first position");
-            hasbeen = true;
+            pressedFirst = true;
             monster.enabled =  true;
+            prompt.SetText("Press F?");
         }
 
     }

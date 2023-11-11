@@ -6,7 +6,7 @@ public class KeySwitching : MonoBehaviour
 {
     public DimLights lightscript;
     public string firstKey = "f";
-    private string randomKey;
+    public string randomKey;
     public bool randomise;
     public AudioSource click;
 
