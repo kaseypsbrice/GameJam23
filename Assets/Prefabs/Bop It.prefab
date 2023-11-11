@@ -44,8 +44,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.7693299, g: 1, b: 0.75, a: 1}
-  m_Intensity: 0.5
-  m_Range: 4
+  m_Intensity: 0.2
+  m_Range: 6
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -83,10 +83,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -104,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2498663408903511191}
   - component: {fileID: 2026917029007122448}
+  - component: {fileID: 1103866747}
   m_Layer: 0
   m_Name: Bop It
   m_TagString: Untagged
@@ -136,11 +137,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7173200493359556698}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.4, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1103866747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173200493359556698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c54e43c7e6a034e941ec481ad664e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playercol: {fileID: 0}
+  bopitbed: {fileID: 7173200493359556698}
+  bopitplayer: {fileID: 0}
+  close: 0
 --- !u!1001 &907585363433103132
 PrefabInstance:
   m_ObjectHideFlags: 0

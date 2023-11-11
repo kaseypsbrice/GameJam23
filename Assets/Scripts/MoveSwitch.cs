@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveSwitch : MonoBehaviour
 {
+    public Transform first;
+    private bool hasbeen;
     public Transform[] SwitchPositions;
     public GameObject LightSwitchOBJ;
     private Transform CurrentSwitchPosition;
@@ -23,20 +25,32 @@ public class MoveSwitch : MonoBehaviour
     }
     public void RandomMoveSwitch()
     {
-        if (SwitchPositions.Length > 1)
+        if(hasbeen == true)
         {
-            Transform NewPosition = GetRandomPosition();
-            while (NewPosition == CurrentSwitchPosition)
+            if (SwitchPositions.Length > 1)
             {
-                NewPosition = GetRandomPosition();
+                Transform NewPosition = GetRandomPosition();
+                while (NewPosition == CurrentSwitchPosition)
+                {
+                    NewPosition = GetRandomPosition();
+                }
+                LightSwitchOBJ.transform.SetPositionAndRotation(NewPosition.position, NewPosition.rotation);
+                CurrentSwitchPosition = NewPosition;
+                Debug.Log("Light has been moved to a random position.");
             }
-            LightSwitchOBJ.transform.SetPositionAndRotation(NewPosition.position, NewPosition.rotation);
-            CurrentSwitchPosition = NewPosition;
-            Debug.Log("Light has been moved to a random position.");
+            else
+            {
+                Debug.LogError("No switch positions defined.");
+            }
         }
         else
         {
-            Debug.LogError("No switch positions defined.");
+            Transform NewPosition= first;
+            LightSwitchOBJ.transform.SetPositionAndRotation(NewPosition.position, NewPosition.rotation);
+            CurrentSwitchPosition = NewPosition;
+            Debug.Log("Light at first position");
+            hasbeen = true;
         }
+
     }
 }

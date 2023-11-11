@@ -1234,7 +1234,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8132739333076622939}
   - component: {fileID: 8599608269328185718}
+  - component: {fileID: 7887406745144378104}
   - component: {fileID: 9111081115191130014}
+  - component: {fileID: 7099944770193088444}
   - component: {fileID: 7365783237754692277}
   - component: {fileID: 4263268001640843345}
   - component: {fileID: 1302433249}
@@ -1273,10 +1275,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8905476807127549153}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2.4, z: 1}
+  m_Center: {x: 0, y: 1.2, z: 0}
+--- !u!65 &7887406745144378104
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905476807127549153}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 2.4, z: 0.6}
+  m_Size: {x: 1.1, y: 2.3, z: 0.9}
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!114 &9111081115191130014
 MonoBehaviour:
@@ -1297,6 +1312,19 @@ MonoBehaviour:
   currentSpeed: 0
   intensityCheck: {fileID: 0}
   lightLevel: 0
+--- !u!114 &7099944770193088444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905476807127549153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67f7acd4e2b7b44cae4dea89cb91b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!95 &7365783237754692277
 Animator:
   serializedVersion: 5

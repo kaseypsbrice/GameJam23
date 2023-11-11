@@ -7,8 +7,6 @@ public class SceneLoader : MonoBehaviour
 {
     public AudioSource click;
 
-    public Collider monster;
-
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -16,13 +14,7 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene("Main Menu");
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
-        }
-        //if(SceneManager.Equals("")) check current scene, if death, start coroutine, wait for length of death cutscene clip then transition to main menu
-    }
-
-    private void OnCollisionEnter(Collision monster)
-    {
-        SceneManager.LoadScene("Death");
+        }  
     }
 
     public void PlayGame()
