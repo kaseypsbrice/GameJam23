@@ -5924,7 +5924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9227dfe722c6ad41a642c6572fe5e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimmingDuration: 20
+  dimmingDuration: 25
   presetLightIntensity: 1.3
 --- !u!1001 &1650898258
 PrefabInstance:
@@ -7071,6 +7071,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1362278328}
+    - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: minSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9111081115191130014, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: intensityCheck
       value: 
