@@ -7098,9 +7098,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 253959317, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253959317, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253959317, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1302433249, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1786059004, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: MaxDistance
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786059005, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786059005, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1786059005, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7099944770193088444, guid: 79015d2566cfc64459db8eaffcb8ab7d, type: 3}
       propertyPath: player
@@ -7212,10 +7240,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 5
+  MaxDistance: 30
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -7248,7 +7276,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
