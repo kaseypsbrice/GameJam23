@@ -41,7 +41,6 @@ public class KeySwitching : MonoBehaviour
             "m"
         };
     }
-
     private void Update()
     {
         if (lightscript != null && lightscript.playerInZone == true)
@@ -49,9 +48,6 @@ public class KeySwitching : MonoBehaviour
             Press();
         }
     }
-    // Keeps getting a null reference exception error
-    // that points to line 47
-
     void Press()
     {
         if (Input.GetKeyDown(randomKey) && lightscript != null && lightscript.lights != null)
