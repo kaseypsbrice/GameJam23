@@ -14,14 +14,12 @@ public class Footsteps : MonoBehaviour
     private Vector3 lastPosition;
 
     public FirstPersonController firstPersonScript;
+    public Monster monster;
 
     public AudioSource stepAudioSource;
-
-    UnityEngine.AI.NavMeshAgent agent;
     void Start()
     {
         lastPosition = transform.position;
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         if (stepAudioSource == null)
         {
             Debug.LogError("AudioSource needs to be attached to Footsteps script.");
@@ -50,15 +48,15 @@ public class Footsteps : MonoBehaviour
         }
         if (gameObject.CompareTag("Monster"))
         {
-            if (agent.speed > 0 && agent.speed < 1 && transform.position != lastPosition)
+            if (monster.currentSpeed > 0 && monster.currentSpeed < 1 && transform.position != lastPosition)
             {
                 PlayFootSteps(monsterSlowSteps);
             }
-            else if (agent.speed >= 1 && agent.speed < 3 && transform.position != lastPosition)
+            else if (monster.currentSpeed >= 1 && monster.currentSpeed < 3 && transform.position != lastPosition)
             {
                 PlayFootSteps(monsterMediumSteps);
             }
-            else if (agent.speed >= 3 && transform.position != lastPosition)
+            else if (monster.currentSpeed >= 3 && transform.position != lastPosition)
             {
                 PlayFootSteps(monsterFastSteps);
             }
