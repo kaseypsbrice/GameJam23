@@ -7306,6 +7306,7 @@ MonoBehaviour:
   monsterMediumSteps: {fileID: 8300000, guid: 2ad214b2a893189458a5d1ce85ae218e, type: 3}
   monsterFastSteps: {fileID: 8300000, guid: 96c55d4e682383442bf8fa1a2f7240ed, type: 3}
   firstPersonScript: {fileID: 0}
+  monster: {fileID: 1766424582149952839}
   stepAudioSource: {fileID: 1766424582149952847}
 --- !u!1001 &3057845316595111116
 PrefabInstance:
@@ -7713,6 +7714,7 @@ MonoBehaviour:
   monsterMediumSteps: {fileID: 0}
   monsterFastSteps: {fileID: 0}
   firstPersonScript: {fileID: 4135149980224560415}
+  monster: {fileID: 0}
   stepAudioSource: {fileID: 4135149980224560416}
 --- !u!1001 &4307359159164577805
 PrefabInstance:
