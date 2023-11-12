@@ -37,4 +37,18 @@ public class SceneLoader : MonoBehaviour
     {
         yield return new WaitForSeconds(click.clip.length);
     }
+
+    public void Credits()
+    {
+        click.Play();
+        StartCoroutine(AudioWait(click));
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void Creditback()
+    {
+        click.Play();
+        StartCoroutine(AudioWait(click));
+        SceneManager.LoadScene("Main Menu");
+    }
 }
